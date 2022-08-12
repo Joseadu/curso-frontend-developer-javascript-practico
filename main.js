@@ -4,10 +4,13 @@ const menuHamIcon = document.getElementById('hamIcon');
 const mobileMenu = document.getElementById('mobileMenu');
 const productDetail = document.getElementById('productDetail');
 const navbarShoppingCart = document.getElementById('navbarShoppingCart');
+const productDetailSecondary = document.getElementById('productDetailSecondary');
+const productDetailSecondaryClose = document.getElementById('productDetailSecondaryClose');
 
 navbarEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 navbarShoppingCart.addEventListener('click', toggleNavbarShoppingCart);
+productDetailSecondaryClose.addEventListener('click', toggleProductDetailSecondaryClose);
 
 function toggleDesktopMenu () {
     desktopMenu.classList.toggle('inactive');
@@ -25,6 +28,14 @@ function toggleNavbarShoppingCart () {
     productDetail.classList.toggle('inactive');
     mobileMenu.classList.add('inactive');
     desktopMenu.classList.add('inactive');
+}
+
+function openProductDetail () {
+    productDetailSecondary.classList.remove('inactive');
+}
+
+function toggleProductDetailSecondaryClose () {
+    productDetailSecondary.classList.add('inactive');
 }
 
 
@@ -51,7 +62,7 @@ productList.push({
 })
 
 
-// GENERAR PRODUCTOS AUTOMÁTICAMENTE
+// // GENERAR PRODUCTOS AUTOMÁTICAMENTE
 
 // for (product of productList) {
 
@@ -61,7 +72,7 @@ productList.push({
 //         <img src=${product.image} alt="">
 //         <div class="product-info">
 //           <div>
-//             <p>${product.price}</p>
+//             <p>$${product.price}</p>
 //             <p>${product.name}</p>
 //           </div>
 
@@ -76,7 +87,6 @@ productList.push({
 //     cardsContainer.innerHTML += htmlCards;
 // }
 
-
 for (product of productList) {
 
     // Crear todos los atributos necesarios añadiéndoles su clase necesaria y previamente maquetadas en CSS
@@ -86,6 +96,7 @@ for (product of productList) {
 
     const productCardImg = document.createElement('img');
     productCardImg.setAttribute('src', product.image);
+    productCardImg.addEventListener('click', openProductDetail)
 
     const productInfo = document.createElement('div');
     productInfo.classList.add('product-info');
