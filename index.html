@@ -16,6 +16,9 @@
 <body>
   <nav>
     <img id="hamIcon" src="./icons/icon_menu.svg" alt="menu" class="menu">
+    <div class="mi-boton">
+      <button id="openProductForm">Add Product</button>
+    </div>
 
 
 
@@ -48,7 +51,7 @@
 
     <div class="navbar-right">
       <ul>
-        <li id="navbarEmail" class="navbar-email">jose.uk94@gmail.com</li>
+        <li id="navbarEmail" class="navbar-email">Joseadu</li>
         <li id="navbarShoppingCart" class="navbar-shopping-cart">
           <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
           <div>2</div>
@@ -62,15 +65,19 @@
     <div id="desktopMenu" class="desktop-menu inactive">
         <ul>
           <li>
-            <a href="/" class="title">My orders</a>
+            <a href="#" class="title">My order</a>
           </li>
     
           <li>
-            <a href="/">My account</a>
+            <a href="#">My account</a>
+          </li>
+          
+          <li>
+            <a href="#">Add product</a>
           </li>
     
           <li>
-            <a href="/">Sign out</a>
+            <a href="#">Sign out</a>
           </li>
         </ul>
       </div>
@@ -122,6 +129,20 @@
         </ul>
       </div>
   </nav>
+
+
+
+  <!-- ADD PRODUCT TO PRODUCT LIST -->
+
+  <div id="formAddProduct" class="form-container inactive">
+    <h2>Add product</h2>
+
+    <form id="myForm" class="my-form">
+      <input id="titleProduct" type="text" placeholder="Insert title"><br>
+      <input id="priceProduct" type="tex" placeholder="Insert price"><br>
+      <button id="formBtn" type="submit">Submit</button>
+    </form>
+  </div>
 
 
 
@@ -217,7 +238,6 @@
       Add to cart
     </button>
   </aside>
-
 
 
   <script src="./main.js"></script>

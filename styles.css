@@ -11,11 +11,31 @@
   body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
-    overflow: hidden;
   }
 
   .inactive {
     display: none;
+  }
+
+  .mi-boton {
+    background-color: var(--hospital-green);
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 8px;
+    
+  }
+
+  #openProductForm {
+    width: 100%;
+    height: 100%;
+    padding: 12px 17px;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: var(--hospital-green);
+    cursor: pointer;
   }
 
 
@@ -129,7 +149,8 @@
     text-align: end;
   }
   .desktop-menu ul li:nth-child(1),
-  .desktop-menu ul li:nth-child(2) {
+  .desktop-menu ul li:nth-child(2),
+  .desktop-menu ul li:nth-child(3) {
     font-weight: bold;
   }
   .desktop-menu ul li:last-child {
@@ -145,6 +166,52 @@
     text-decoration: none;
     margin-bottom: 20px;
     display: inline-block;
+  }
+
+
+  /* ADD PRODUCT TO PRODUCT LIST */
+
+  .form-container {
+    position: absolute;
+    width: 200px;
+    top: 60px;
+    right: 60px;
+    padding: 25px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+  }
+  .form-container h2 {
+    font-size: var(--lg);
+    color: var(--black);
+    font-weight: bold;
+    margin: 0 !important;
+  }
+  .my-form input {
+    width: 200px;
+    font-size: var(--sm);
+    margin-top: 7px;
+  }
+  .my-form input:first-child {
+    margin-top:15px;
+  }
+  #formBtn {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 7px;
+    cursor: pointer;
+
+    /* transition: .15s ease; */
+  }
+  #formBtn:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    background-color: var(--white);
+
+    /* transition: .15s ease; */
   }
 
 
@@ -206,7 +273,7 @@
 
 
   /* CARRITO DE COMPRAS */
-  
+
   .product-detail {
     width: 360px;
     padding: 0 24px 24px 24px;
